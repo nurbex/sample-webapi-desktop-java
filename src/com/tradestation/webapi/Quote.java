@@ -2,6 +2,8 @@ package com.tradestation.webapi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 /**
  * @author jjelinek@tradestation.com
  */
@@ -49,6 +51,26 @@ public class Quote {
     private String Error;
     private int DailyOpenInterest;
     private boolean IsDelayed;
+    private double VWAP;
+    private boolean Halted;
+    private int LastSize;
+    private String LastVenue;
+    private String TradeTime; // time 2021-01-11T00:00:00.0000000+00:00
+    private String DataFeed;
+    private List Restrictions; //[]
+    private String High52WeekTimeStamp; // 2021-01-11T00:00:00.0000000+00:00",
+    private String Low52WeekTimeStamp; // 2020-09-04T00:00:00.0000000+00:00",
+    private double VWAPDisplay; // 38.72",
+    private String ExpirationDate;
+    private String FirstNoticeDate;
+    private String LastTradingDate;
+    private double MaxPrice;
+    private double MinPrice;
+    private String TickSizeTier;
+    private String Underlying;
+    private double MaxPriceDisplay;
+    private double MinPriceDisplay;
+
 
     public String getSymbol() {
         return Symbol;
@@ -435,5 +457,165 @@ public class Quote {
     @JsonProperty("IsDelayed")
     public void setIsDelayed(boolean isDelayed) {
         IsDelayed = isDelayed;
+    }
+
+    public boolean isDelayed() {
+        return IsDelayed;
+    }
+    @JsonProperty("Delayed")
+    public void setDelayed(boolean delayed) {
+        IsDelayed = delayed;
+    }
+
+    public double getVWAP() {
+        return VWAP;
+    }
+    @JsonProperty("VWAP")
+    public void setVWAP(double VWAP) {
+        this.VWAP = VWAP;
+    }
+
+    public boolean isHalted() {
+        return Halted;
+    }
+    @JsonProperty("Halted")
+    public void setHalted(boolean halted) {
+        Halted = halted;
+    }
+
+    public int getLastSize() {
+        return LastSize;
+    }
+    @JsonProperty("LastSize")
+    public void setLastSize(int lastSize) {
+        LastSize = lastSize;
+    }
+
+    public String getLastVenue() {
+        return LastVenue;
+    }
+    @JsonProperty("LastVenue")
+    public void setLastVenue(String lastVenue) {
+        LastVenue = lastVenue;
+    }
+
+    public String getTradeTime() {
+        return TradeTime;
+    }
+    @JsonProperty("TradeTime")
+    public void setTradeTime(String tradeTime) {
+        TradeTime = tradeTime;
+    }
+
+    public String getDataFeed() {
+        return DataFeed;
+    }
+    @JsonProperty("DataFeed")
+    public void setDataFeed(String dataFeed) {
+        DataFeed = dataFeed;
+    }
+
+    public List getRestrictions() {
+        return Restrictions;
+    }
+    @JsonProperty("Restrictions")
+    public void setRestrictions(List restrictions) {
+        Restrictions = restrictions;
+    }
+
+    public String getHigh52WeekTimeStamp() {
+        return High52WeekTimeStamp;
+    }
+    @JsonProperty("High52WeekTimeStamp")
+    public void setHigh52WeekTimeStamp(String high52WeekTimeStamp) {
+        High52WeekTimeStamp = high52WeekTimeStamp;
+    }
+
+    public String getLow52WeekTimeStamp() {
+        return Low52WeekTimeStamp;
+    }
+    @JsonProperty("Low52WeekTimeStamp")
+    public void setLow52WeekTimeStamp(String low52WeekTimeStamp) {
+        Low52WeekTimeStamp = low52WeekTimeStamp;
+    }
+
+    public double getVWAPDisplay() {
+        return VWAPDisplay;
+    }
+    @JsonProperty("VWAPDisplay")
+    public void setVWAPDisplay(double VWAPDisplay) {
+        this.VWAPDisplay = VWAPDisplay;
+    }
+
+    public String getExpirationDate() {
+        return ExpirationDate;
+    }
+    @JsonProperty("ExpirationDate")
+    public void setExpirationDate(String expirationDate) {
+        ExpirationDate = expirationDate;
+    }
+
+    public String getFirstNoticeDate() {
+        return FirstNoticeDate;
+    }
+    @JsonProperty("FirstNoticeDate")
+    public void setFirstNoticeDate(String firstNoticeDate) {
+        FirstNoticeDate = firstNoticeDate;
+    }
+
+    public String getLastTradingDate() {
+        return LastTradingDate;
+    }
+    @JsonProperty("LastTradingDate")
+    public void setLastTradingDate(String lastTradingDate) {
+        LastTradingDate = lastTradingDate;
+    }
+
+    public double getMaxPrice() {
+        return MaxPrice;
+    }
+    @JsonProperty("MaxPrice")
+    public void setMaxPrice(double maxPrice) {
+        MaxPrice = maxPrice;
+    }
+
+    public double getMinPrice() {
+        return MinPrice;
+    }
+    @JsonProperty("MinPrice")
+    public void setMinPrice(double minPrice) {
+        MinPrice = minPrice;
+    }
+
+    public String getTickSizeTier() {
+        return TickSizeTier;
+    }
+    @JsonProperty("TickSizeTier")
+    public void setTickSizeTier(String tickSizeTier) {
+        TickSizeTier = tickSizeTier;
+    }
+
+    public String getUnderlying() {
+        return Underlying;
+    }
+    @JsonProperty("Underlying")
+    public void setUnderlying(String underlying) {
+        Underlying = underlying;
+    }
+
+    public double getMaxPriceDisplay() {
+        return MaxPriceDisplay;
+    }
+    @JsonProperty("MaxPriceDisplay")
+    public void setMaxPriceDisplay(double maxPriceDisplay) {
+        MaxPriceDisplay = maxPriceDisplay;
+    }
+
+    public double getMinPriceDisplay() {
+        return MinPriceDisplay;
+    }
+    @JsonProperty("MinPriceDisplay")
+    public void setMinPriceDisplay(double minPriceDisplay) {
+        MinPriceDisplay = minPriceDisplay;
     }
 }

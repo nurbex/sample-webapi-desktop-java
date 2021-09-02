@@ -8,7 +8,9 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/async-http-client-1.7.18-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/async-http-client-1.7.18-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/netty-3.6.6.Final-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

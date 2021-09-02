@@ -28,8 +28,8 @@ public class TradeStationWebApi {
     private Token token;
 
     public TradeStationWebApi(String redirectUri) {
-        APIKEY = "your api key";
-        APISECRET = "your api secret";
+        APIKEY = "";
+        APISECRET = "";
         BASEURL = "https://sim.api.tradestation.com/v2/";
         CALLBACK = redirectUri;
     }
@@ -189,6 +189,7 @@ public class TradeStationWebApi {
                     return response;
                 }
             });
+            //System.out.println(response);
         } catch (IOException e) {
             e.printStackTrace();
         }
